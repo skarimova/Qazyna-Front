@@ -1,0 +1,13 @@
+<fieldset class="main back-color-light">
+    <label class="color-dark text-style">Барлығы:</label>
+    <div id="count" class="color-dark text-style back-color-light">{{total}}</div> <br>
+
+    <div style="column-count: 3;">
+        <div *ngFor="let translation of translations" style="margin-left: 10%; margin-bottom: 3%; border-bottom: 1px solid black; margin-right: 10%;">
+            <div id="word" class="text-style" style="margin-top: 2%;">{{ translation.word_kk }}</div>
+            <div id="translation" class="text-style" style="margin-top: 1%;">{{ translation.word_ru }}</div>
+            <div id="meaning" class="text-style" style="margin-top: 0.5%;">{{ translation.meaning_kk }} - {{ translation.meaning_ru }}</div>
+        </div>
+    </div>   
+</fieldset>
+

@@ -1,0 +1,17 @@
+<fieldset class="main back-color-light">
+    <label class="color-dark text-style">Қазақша:</label>
+    <input id="new-word-kk" class="back-color-light text-style" type="text" placeholder="Сөзді жазыңыз..." style="margin-top: 4%; margin-left: 40px; width: 51%" value= "" [(ngModel)]="wordKK"> <br>
+    <label class="color-dark text-style">На русском:</label>
+    <input id="new-word-ru" class="back-color-light text-style" type="text" placeholder="Напишите перевод..." style="margin-top: 2%; margin-left: 12px; width: 51%" value="" [(ngModel)]="wordRU"> <br>
+    <label class="color-dark text-style">Мағынасы:</label>
+    <input id="new-word-meainig-kk" class="back-color-light text-style" type="text" placeholder="Сөздің мағынасын жазыңыз..." style="margin-top: 2%; margin-left: 23px; width: 51%" value="" [(ngModel)]="meaningKK"> <br>
+    <label class="color-dark text-style">Значение:</label>
+    <input id="new-word-meaning-ru" class="back-color-light text-style" type="text" placeholder="Напишите значение слова..." style="margin-top: 2%; margin-left: 31px; width: 51%" value="" [(ngModel)]="meaningRU">
+    <button id="search" class="color-dark text-style back-color-yellow tooltip" (click)="addTranslation()" [class.spinner]="loading" (click)="save()" [disabled]="!wordKK || !wordRU || !meaningKK || !meaningRU">Сөзді қосу
+        <div class="tooltiptext back-color-dark color-light">Заполните все поля!</div>
+    </button>
+    <br>
+    
+    <app-information-window [word_kk]="translation.word_kk" [word_ru]="translation.word_ru" [meaning]="translation.meaning"></app-information-window>
+    <button id="change-btn" class="color-dark text-style back-color-yellow"><a routerLink="/edit" (click)="getTranslatedData()" class="color-dark text-style">Өңдеу</a></button> 
+</fieldset>

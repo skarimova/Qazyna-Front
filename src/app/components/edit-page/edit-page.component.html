@@ -1,0 +1,15 @@
+<fieldset class="main back-color-light">
+    <label class="color-dark text-style">Қазақша:</label>
+    <input id="edit-word" class="color-dark back-color-light text-style" #input_kk type="text" value="{{dataList.word_kk}}" style="margin-top: 4%; margin-left: 40px; width: 50vw;"> <br>
+    <label class="color-dark text-style">На русском:</label>
+    <input id="edit-word" class="color-dark back-color-light text-style" #input_ru type="text" value="{{dataList.word_ru}}" style="margin-top: 2%; margin-left: 12px; width: 50vw;"> <br>
+    <label class="color-dark text-style">Мағынасы:</label>
+    <input id="edit-word" class="color-dark back-color-light text-style" #input_meaning_kk type="text" value="{{dataList.meaning_kk}}" style="margin-top: 2%; margin-left: 23px; width: 50vw;"> <br>
+    <label class="color-dark text-style">Значение:</label>
+    <input id="edit-word" class="color-dark back-color-light text-style" #input_meaning_ru type="text" value="{{dataList.meaning_ru}}" style="margin-top: 2%; margin-left: 31px; width: 50vw;">
+    <button id="search" class="color-dark text-style back-color-yellow" (click)="change()" [class.spinner]="loading" [disabled]="loading" (click)="save()">Өзгерту</button>
+    <br>
+
+    <app-information-window [word_kk]="dataList.word_kk" [word_ru]="dataList.word_ru" [meaning]="dataList.meaning"></app-information-window>
+    <button id="change-btn" class="color-dark text-style back-color-yellow" (click)="delete()" routerLink="/main">Жою</button>
+</fieldset>
