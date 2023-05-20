@@ -4,7 +4,7 @@ import { AddDto, GetTranslationDto } from "../dto/dto";
 import { Translation } from "../models/translation.model";
 import { Observable } from "rxjs";
 
-const baseUrl = 'https://shark-app-kkbr8.ondigitalocean.app/';
+const baseUrl = 'https://dolphin-app-tzvc7.ondigitalocean.app/';
 @Injectable({
     providedIn: 'root'
  })
